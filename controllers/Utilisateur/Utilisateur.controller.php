@@ -218,4 +218,5 @@ class UtilisateurController extends MainController
             unlink("public/assets/images/" . $ancienneImage);
         }
     }
+   
 }

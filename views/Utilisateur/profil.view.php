@@ -1,4 +1,4 @@
-<div class="page_title <?= $css ?>">
+<div class="page_title profil">
 
     <h1 id=titre_gsap>Page du profil de <?= $utilisateur['login'] ?></h1>
 
@@ -10,13 +10,14 @@
             <div>
                 <label for="image">Changer l'image de profil</label><br>
                 <input type="file" name="image" id="image" onchange="submit()">
-
             </div>
+        </form>
+
+        <a href="<?= URL ?>public/assets/images/<?= $utilisateur['image'] ?>" download="photo_<?= $utilisateur['image'] ?>" target="_blank" rel="noreferrer" class="btnDL">DL img</a>
+
+
+
     </div>
-
-
-
-    </form>
 
     <br>
     <div id="role">
@@ -51,4 +52,3 @@
     </a>
 
 </div>
-   

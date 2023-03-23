@@ -1,8 +1,3 @@
-<!-- il peut exister plusieurs controller -->
-<!--  il peut être monter avec POO ou fonctions -->
-<!-- le .controller ou .view est optionnel -->
-<!-- POO plus maintenable et adaptable, on préfèrera  -->
-
 
 <?php
 

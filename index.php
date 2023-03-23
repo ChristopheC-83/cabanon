@@ -1,7 +1,3 @@
-<!-- cette page est le centre de notre structure mvc -->
-<!-- pour accéder à une page, il faudrait ecrire en url -->
-<!--  index.php?page=accueil -->
-<!-- on améliore avec htaccess et une modif -->
 
 <?php
 
@@ -132,6 +128,7 @@ try {
                         }
                         // $utilisateurController->validation_suppressionCompte();
                         break;
+                       
                     default:
                         throw new Exception("La page n'existe pas !");
                 }
