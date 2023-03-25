@@ -1,16 +1,11 @@
-Visiteur => voit le site
-Utitlisateur => a un compte qu'il peut gérer
-Administrateur => a les clés du chateau
+Mise en place d'un site dynamique (php) pour mon frère.
 
-en POO, les fonctions sont :
-public => accesibles de partout
-protected => accessible à l'intérieur de la classe ou d'une classe enfant.
-private => seulement à l'intérieur de la classe.
+Objectifs :
+un minidsite vitrine pour son groupe de muqsique
+formulaire de contact
+bdd des morceaux qu'ils s'échangent et sur lequels ils travaillent*
 
-Une classe abstraite ne peut pas être instanciée.
-Elle sert de 'support"/modèle à d'autres classes.
-
-Pour acoir un mdp crypté, on affiche
-"echo password_hash("test", PASSWORD_DEFAULT);"
-(test ou autre...)
-et hop, on peut renseigner notre bd avec le mot de passe hashé !
+Pour moi
+gestion comptes utilisateurs avec plusieurs niveaux d'accés
+création de carte des membres du groupe à partir bdd
+gestion bdd avec possibilités de CRUD à patir du site
