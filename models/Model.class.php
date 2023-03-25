@@ -7,12 +7,12 @@ abstract class Model
 
     // on crée des variables, plus facile à modifier au besoin
 
-    private static $dbhost = "localhost";
-    private static $dbname = "gestion_comptes";
-    private static $dbUser = "root";
-    private static $dbUserPassword = "";
+    private static $dbhost = "89.116.147.103";
+    private static $dbname = "u256533777_cabanon";
+    private static $dbUser = "u256533777_frangin";
+    private static $dbUserPassword = "Cabanon_83250";
     private static $pdo;
-    
+
 
     private static function setBdd()
     {

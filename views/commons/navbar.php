@@ -1,9 +1,9 @@
-<nav class="navContainer">
+<nav class="navbar narbarHidden">
 
-    <ul>
-        <li><a href="<?= URL ?>accueil">Accueil</a></li>
-        <li><a href="<?= URL ?>page1">Page 1</a></li>
-        <li><a href="<?= URL ?>page2">Page 2</a></li>
+    <ul class = "">
+        <li><a href="<?= URL ?>accueil">CabAccueil</a></li>
+        <li><a href="<?= URL ?>membres">Membres</a></li>
+        <li><a href="<?= URL ?>galerie">Galerie</a></li>
 
 
         <?php if (Securite::estConnecte() && Securite::estAdministrateur()) : ?>
@@ -12,17 +12,18 @@
             <li><a href="<?= URL ?>administration/page2">Admin 2</a></li>
 
         <?php endif ?>
+        <?php if (!Securite::estConnecte()) : ?>
+            <li><a href="<?= URL ?>login">Connexion</a></li>
+            <li><a href="<?= URL ?>creerCompte">Inscription</a></li>
+        <?php else : ?>
+            <li><a href="<?= URL ?>compte/profil">Profil</a></li>
+            <li><a href="<?= URL ?>compte/deconnexion">Déconnexion</a></li>
+        <?php endif ?>
     </ul>
-
-    <?php if (!Securite::estConnecte()) : ?>
-        <a href="<?= URL ?>login"><img src="<?= URL ?>public/assets/images/connexion/cadenas.png"></a>
-        <a href="<?= URL ?>creerCompte"><i class="fa-regular fa-square-plus"></i></a>
-    <?php else : ?>
-        <a href="<?= URL ?>compte/profil"><img src="<?= URL ?>public/assets/images/connexion/buste.png"></a>
-        <a href="<?= URL ?>compte/deconnexion"><img src="<?= URL ?>public/assets/images/connexion/door.jpg"></a>
-    <?php endif ?>
-
-
+<div class="flecheNavbar">
+    
+        <i class="fa-solid fa-angles-right fa-sm"></i>
+</div>
 
 
 

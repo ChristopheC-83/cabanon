@@ -29,11 +29,11 @@ try {
         case "accueil":
             $visiteurController->accueil();
             break;
-        case "page1":
-            $visiteurController->page1();
+        case "membres":
+            $visiteurController->membres();
             break;
-        case "page2":
-            $visiteurController->page2();
+        case "galerie":
+            $visiteurController->galerie();
             break;
         case "login":
             $visiteurController->login();

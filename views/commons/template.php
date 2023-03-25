@@ -40,6 +40,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <!-- pour choisir les fichiers js actifs par page qui seront dans un tableau dans les controllers-->
+    <script src="<?= URL?>public/javaScript/navbar.js"></script>
     <?php if(!empty($js)) : ?>
         <?php foreach($js as $fichier_javascript) : ?>
             <script src="<?= URL?>public/javaScript/<?= $fichier_javascript ?>"></script>

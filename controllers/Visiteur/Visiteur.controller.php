@@ -16,8 +16,8 @@ class VisiteurController extends MainController
     public function accueil()
     {
         $data_page = [
-            "page_title" => "titre de la page d'accueil",
-            "page_description" => "Description de la page d'accueil",
+            "page_title" => "Cabanon et Musique",
+            "page_description" => "Cabanon, groupe de musique, concert et évènements",
             "view" => "views/Visiteur/accueil.view.php",
             "template" => "views/commons/template.php",
             "css" => "accueil",
@@ -27,15 +27,15 @@ class VisiteurController extends MainController
         $this->genererPage($data_page);
     }
 
-    public function Page1()
+    public function membres()
     {
         // ce tableau montre qu'on peut rajouter ce qu'on veut en variable !
         $data_page = [
-            "page_title" => "titre de la page page 1",
-            "page_description" => "Description de la page page 1",
-            "view" => "views/Visiteur/page1.view.php",
+            "page_title" => "Cabanon et Musique",
+            "page_description" => "Les membres de Cabanon",
+            "view" => "views/Visiteur/membres.view.php",
             "template" => "views/commons/template.php",
-            "css" => "page1",
+            "css" => "membres",
             "js" => ["app.js"]
 
         ];
@@ -43,14 +43,14 @@ class VisiteurController extends MainController
         $this->genererPage($data_page);
     }
 
-    public function Page2()
+    public function galerie()
     {
         $data_page = [
-            "page_title" => "titre de la page 2",
-            "page_description" => "Description de la page 2",
-            "view" => "views/Visiteur/page2.view.php",
+            "page_title" => "Cabanon et Musique",
+            "page_description" => "Galerie Photos",
+            "view" => "views/Visiteur/galerie.view.php",
             "template" => "views/commons/template.php",
-            "css" => "page2",
+            "css" => "galerie",
             "js" => ["app.js"]
 
         ];
