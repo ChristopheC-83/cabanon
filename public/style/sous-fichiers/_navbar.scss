@@ -1,16 +1,79 @@
-.navbar {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  border : 1px solid violet;
-  margin-top: 15px;
-  transition : all 0.5s;
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: $color3;
+  position: relative;
 
-  .flecheNavbar{
-    margin-left: 15px;
+  .corde {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 5;
   }
 
-  .narbarHidden{
-    transform: translateX(-100%);
+  @for $i from 1 to 6 {
+    .corde#{$i} {
+      top: (12.5% + 12.5% * $i);
+    }
+  }
+
+  .partition{
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cleSol{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 0;top: 0;
+    @include flexMid;
+
+  }
+
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  // border: 1px solid violet;
+  font-size: 33px;
+  font-weight: bold;
+  font-family: 'Qwigley', cursive;
+
+  .navbar1{
+    transform: translateY(-10px);
+  }
+  .navbar2{
+    transform: translateY(15px);
+  }
+  .navbar3{
+    transform: translateY(0px);
+  }
+  .navbar4{
+    transform: translateY(-5px);
+  }
+  .navbar5{
+    transform: translateY(5px);
+  }
+  .navbar6{
+    transform: translateY(-10px);
+  }
+  .navbar7{
+    transform: translateY(10px);
+  }
+  .navbar8{
+    transform: translateY(-5px);
+  }
+  .navbar9{
+    transform: translateY(20px);
+  }
+  .navbar10{
+    transform: translateY(10px);
   }
 }

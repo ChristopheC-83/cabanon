@@ -1,5 +1,5 @@
 <div class="footer">
 
-<h3>Footer de la formation structure de départ MVC.</h3>
+Tous droits réservés. Site produit par <a href="https://barpat.fun/">Christophe C</a>.
 
 </div>

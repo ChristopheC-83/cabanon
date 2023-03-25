@@ -1,29 +1,36 @@
-<nav class="navbar narbarHidden">
+<nav class="navbar">
 
-    <ul class = "">
-        <li><a href="<?= URL ?>accueil">CabAccueil</a></li>
-        <li><a href="<?= URL ?>membres">Membres</a></li>
-        <li><a href="<?= URL ?>galerie">Galerie</a></li>
+    <a href="<?= URL ?>accueil" class="navbar1">CabAccueil</a>
+    <i class="fa-solid fa-music"></i>
+    <a href="<?= URL ?>membres" class="navbar2">Membres</a>
+    <i class="fa-solid fa-music"></i>
+    <a href="<?= URL ?>galerie" class="navbar3">Galerie</a>
+    <i class="fa-solid fa-music"></i>
 
 
-        <?php if (Securite::estConnecte() && Securite::estAdministrateur()) : ?>
+    <?php if (Securite::estConnecte() && Securite::estAdministrateur()) : ?>
 
-            <li><a href="<?= URL ?>administration/droits">Gérer les droits</a></li>
-            <li><a href="<?= URL ?>administration/page2">Admin 2</a></li>
+        <a href="<?= URL ?>administration/droits" class="navbar4">Gérer les droits</a>
+        <i class="fa-solid fa-music"></i>
+        <a href="<?= URL ?>administration/page2" class="navbar5">Admin 2</a>
+        <i class="fa-solid fa-music"></i>
 
-        <?php endif ?>
-        <?php if (!Securite::estConnecte()) : ?>
-            <li><a href="<?= URL ?>login">Connexion</a></li>
-            <li><a href="<?= URL ?>creerCompte">Inscription</a></li>
-        <?php else : ?>
-            <li><a href="<?= URL ?>compte/profil">Profil</a></li>
-            <li><a href="<?= URL ?>compte/deconnexion">Déconnexion</a></li>
-        <?php endif ?>
-    </ul>
-<div class="flecheNavbar">
+    <?php endif ?>
+    <?php if (!Securite::estConnecte()) : ?>
+        <a href="<?= URL ?>login" class="navbar6">Connexion</a>
+        <i class="fa-solid fa-music"></i>
+        <a href="<?= URL ?>creerCompte" class="navbar7">Inscription</a>
+        <i class="fa-solid fa-music"></i>
+    <?php else : ?>
+        <a href="<?= URL ?>compte/profil" class="navbar8">Profil</a>
+        <i class="fa-solid fa-music"></i>
+        <a href="<?= URL ?>compte/deconnexion" class="navbar9">Déconnexion</a>
+        <i class="fa-solid fa-music"></i>
+    <?php endif ?>
+    <!-- <div class="flecheNavbar">
     
         <i class="fa-solid fa-angles-right fa-sm"></i>
-</div>
+</div> -->
 
 
 
