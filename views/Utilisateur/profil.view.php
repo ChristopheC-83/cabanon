@@ -1,8 +1,10 @@
 <div class="page_title profil">
 
-    <h1 id=titre_gsap>Page du profil de <?= $utilisateur['login'] ?></h1>
+    <h1 id=titre_gsap>Page du profil </h1>
+    <h2><?= $utilisateur['login'] ?></h2>
 
-    <div class="imageEtModif">
+
+    <div class="card">
         <div><img src="<?= URL ?>public/assets/images/<?= $utilisateur['image'] ?>" width="150px" alt="photo de profil">
         </div>
         <!-- enctype obligatoire qd données images (ou autres ? à voir) à recupérer -->
@@ -13,42 +15,42 @@
             </div>
         </form>
 
-        <a href="<?= URL ?>public/assets/images/<?= $utilisateur['image'] ?>" download="photo_<?= $utilisateur['image'] ?>" target="_blank" rel="noreferrer" class="btnDL">DL img</a>
+        <!-- <a href="<?= URL ?>public/assets/images/<?= $utilisateur['image'] ?>" download="photo_<?= $utilisateur['image'] ?>" target="_blank" rel="noreferrer" class="btnDL">DL img</a> -->
 
 
 
+
+        <br>
+        <div id="role">
+            <p>Role : <?= $_SESSION['profil']['role'] ?></p>
+        </div>
+        <br>
+        <div id="mail">
+            <p>Mail : <?= $utilisateur['mail'] ?></p>
+            <button class="pen"><i class="fa-solid fa-pen" id="btnModifMail"></i></button>
+        </div>
+        <br>
+        <div id="modificationMail" class="dnone">
+            <form action="<?= URL ?>compte/validation_modificationMail" method="post">
+                <div class="entry_formulaire">
+                    <label for="mail2">Nouvelle adresse :</label>
+
+                    <input type="text" placeholder="<?= $utilisateur['mail'] ?>" name="mail" id="mail2">
+
+                    <button id="btnValidationModifMail" class="btnSuppModifMail">Valider la nouvelle adresse</button>
+                </div>
+            </form>
+
+        </div>
+
+        <button id="btnModifMdp"><a href="<?= URL ?>compte/modificationPassword">Modifier le mot de passe</a></button>
+        <button id="btnSuppCompte" class="btnSuppCompte">Supprimer mon compte</button>
     </div>
 
-    <br>
-    <div id="role">
-        <p>Role : <?= $_SESSION['profil']['role'] ?></p>
-    </div>
-    <br>
-    <div id="mail">
-        <p>Mail : <?= $utilisateur['mail'] ?></p>
-        <button><i class="fa-solid fa-pen" id="btnModifMail"></i></button>
-    </div>
-    <br>
-    <div id="modificationMail" class="div_cachee">
-        <form action="<?= URL ?>compte/validation_modificationMail" method="post">
-            <div class="entry_formulaire">
-                <label for="mail2">Nouvelle adresse :</label>
-
-                <input type="text" placeholder="<?= $utilisateur['mail'] ?>" name="mail" id="mail2">
-
-                <button id="btnValidationModifMail">Valider la nouvelle adresse</button>
-            </div>
-        </form>
+    <div id="suppCompte" class="validationSupp dnone">
+        <a href="<?= URL ?>compte/suppressionCompte">
+            Veuillez confirmer la supression. <br>Action définitive et irréversible !
+        </a>
 
     </div>
-
-    <button id="btnModifMdp"><a href="<?= URL ?>compte/modificationPassword">Modifier le mot de passe</a></button>
-    <button id="btnSuppCompte" class="btnSuppCompte">Supprimer mon compte</button>
-</div>
-
-<div id="suppCompte" class="validationSupp dnone ">
-    <a href="<?= URL ?>compte/suppressionCompte">
-        Veuillez confirmer la supression. <br>Action définitive et irréversible !
-    </a>
-
 </div>

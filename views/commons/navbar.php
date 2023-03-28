@@ -1,6 +1,6 @@
 <nav class="navbar">
 
-    <a href="<?= URL ?>accueil" class="navbar1">CabAccueil</a>
+    <a href="<?= URL ?>accueil" class="navbar1">LaboraZic</a>
     <i class="fa-solid fa-music"></i>
     <a href="<?= URL ?>membres" class="navbar2">Membres</a>
     <i class="fa-solid fa-music"></i>

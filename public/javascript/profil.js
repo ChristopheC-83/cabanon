@@ -11,7 +11,7 @@ const divModifMail = document.querySelector("#modificationMail");
 btnModifMail.addEventListener("click", () => {
   divMail.style.display = "none";
   btnModifMdp.style.display = "none";
-  divModifMail.classList.remove("div_cachee");
+  divModifMail.classList.remove("dnone");
   btnSuppCompte.classList.add("dnone");
 });
 

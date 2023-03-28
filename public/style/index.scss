@@ -12,10 +12,13 @@
 @import "./pages/erreur";
 @import "./pages/pageLogin";
 @import "./pages/exchange";
+@import "./pages/droits";
 
 body {
   background-color: $color3;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .app {

@@ -1,6 +1,6 @@
 <div class="page_title <?= $css  ?>">
 
-    <h1>Cabanon</h1>
+    <h1>LAboraZik</h1>
     <h2>Les membres</h2>
     <div class="content">
         <img src="<?= URL ?>public/assets/images/site/profilCards.jpg" alt="" id="imgAccueil">

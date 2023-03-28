@@ -1,6 +1,6 @@
 <div class="page_title <?= $css ?>">
 
-<h1>Cabanon</h1>
+<h1>LaboraZik</h1>
     <h2>Galerie</h2>
     <div class="content">
         <img src="<?= URL ?>public/assets/images/site/guitare_en_feu.jpg" alt="" id="imgAccueil">

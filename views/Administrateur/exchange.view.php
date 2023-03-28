@@ -57,10 +57,11 @@
                                     <button type="submit" class="btn btn-sup">Supprimer</button>
                                 </form>
                             </td>
-                            <td colspan="3"><audio controls>
+                            <td colspan="2"><audio controls>
                                     <source src="<?= URL ?>/public/assets/musiques/<?= $musique['nom_projet'] ?>_<?= $musique['nom_fichier'] ?>">
                                 </audio>
                             </td>
+                            <td><a href="<?= URL ?>/public/assets/musiques/<?= $musique['nom_projet'] ?>_<?= $musique['nom_fichier'] ?>" download="<?= $musique['nom_fichier'] ?>" target="_blank" rel="noreferrer">Télécharger</a></td>
                         </tr>
                     </div>
 
@@ -81,10 +82,11 @@
                             </form>
 
                         </td>
-                        <td colspan="3"><audio controls>
+                        <td colspan="2"><audio controls>
                                 <source src="<?= URL ?>/public/assets/musiques/<?= $musique['nom_projet'] ?>_<?= $musique['nom_fichier'] ?>">
                             </audio>
                         </td>
+                        <td><a href="<?= URL ?>/public/assets/musiques/<?= $musique['nom_projet'] ?>_<?= $musique['nom_fichier'] ?>" download="<?= $musique['nom_fichier'] ?>" target="_blank" rel="noreferrer">Télécharger</a></td>
                     </tr>
                 </div>
 
@@ -110,7 +112,7 @@
                  $_POST['nom_fichier'] 
             </div> -->
             <div>
-                <label for="nom_projet">Nom du Projet :</label>
+                <label for="nom_projet">Nom du Projet (pas du fichier !) :</label>
                 <input type="text" name="nom_projet" id="nom_projet">
                 <!-- $_POST['nom_projet']-->
             </div>

@@ -3,7 +3,6 @@
   height: 100px;
   background-color: $color3;
   position: relative;
-  
 
   .corde {
     height: 1px;
@@ -20,21 +19,20 @@
     }
   }
 
-  .partition{
+  .partition {
     display: flex;
     width: 100%;
     height: 100%;
   }
 
-  .cleSol{
+  .cleSol {
     width: 100px;
     height: 100px;
     position: relative;
-    left: 0;top: 0;
+    left: 0;
+    top: 0;
     @include flexMid;
-
   }
-
 }
 
 .navbar {
@@ -45,36 +43,108 @@
   // border: 1px solid violet;
   font-size: 33px;
   font-weight: bold;
-  font-family: 'Qwigley', cursive;
+  font-family: "Qwigley", cursive;
+  margin-right: 5px;
 
-  .navbar1{
+  .navbar1 {
     transform: translateY(-10px);
   }
-  .navbar2{
+  .navbar2 {
     transform: translateY(15px);
   }
-  .navbar3{
+  .navbar3 {
     transform: translateY(0px);
   }
-  .navbar4{
+  .navbar4 {
     transform: translateY(-5px);
   }
-  .navbar5{
+  .navbar5 {
     transform: translateY(5px);
   }
-  .navbar6{
+  .navbar6 {
     transform: translateY(-10px);
   }
-  .navbar7{
+  .navbar7 {
     transform: translateY(10px);
   }
-  .navbar8{
+  .navbar8 {
     transform: translateY(-5px);
   }
-  .navbar9{
+  .navbar9 {
     transform: translateY(20px);
   }
-  .navbar10{
+  .navbar10 {
     transform: translateY(10px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar {
+    i {
+      display: none;
+    }
+  }
+  .header {
+    .cleSol {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .corde {
+    display: none;
+  }
+  .header {
+    .cleSol {
+      display: block;
+    }
+  }
+  .navbar {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    z-index: 5;
+    a{
+    color : #f1f1f1;
+  font-size: 45px;}
+    .navbar1 {
+      transform: translateY(0);
+    }
+    .navbar2 {
+      transform: translateY(0);
+    }
+    .navbar3 {
+      transform: translateY(0px);
+    }
+    .navbar4 {
+      transform: translateY(-0);
+    }
+    .navbar5 {
+      transform: translateY(0);
+    }
+    .navbar6 {
+      transform: translateY(-0);
+    }
+    .navbar7 {
+      transform: translateY(0);
+    }
+    .navbar8 {
+      transform: translateY(-0);
+    }
+    .navbar9 {
+      transform: translateY(0);
+    }
+    .navbar10 {
+      transform: translateY(0);
+    }
+    transform: translateX(-50%);
+    transition: all 0.5s;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
   }
 }

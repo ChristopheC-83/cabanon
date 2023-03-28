@@ -1,7 +1,8 @@
 <div class="page_title <?= $css  ?>">
 
 
-    <h1>Page d'administration des droits des utilisateurs</h1>
+    <h1>Page d'administration </h1>
+    <h2>Droits des utilisateurs</h2>
 
     <table>
         <thead>

@@ -21,7 +21,7 @@
 <body>
 
     <?php require_once("views/commons/header.php"); ?>
-
+    <div class="overlay"></div>
     <div class="app">
 
         <?php
