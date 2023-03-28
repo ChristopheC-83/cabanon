@@ -141,8 +141,7 @@ a {
   font-family: "Qwigley", cursive;
   font-size: 40px;
   background-color: #ccd5ae;
-  position: absolute;
-  bottom: 0;
+  margin-top: 200px;
 }
 
 .alert {
@@ -484,6 +483,109 @@ a {
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.exchange {
+  border-bottom: 1px solid #fefae0;
+}
+.exchange h1,
+.exchange h2 {
+  text-align: center;
+  color: #333;
+}
+.exchange h1 {
+  font-family: "Qwigley", cursive;
+  font-size: 80px;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.exchange h2 {
+  font-size: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.exchange h3 {
+  color: #333;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.exchange p {
+  color: #333;
+  font-weight: bold;
+  line-height: 25px;
+}
+.exchange table {
+  width: 90%;
+  margin: 30px auto;
+  color: #333;
+  border: 3px solid #ccd5ae;
+  padding: 10px;
+}
+.exchange th {
+  text-align: center;
+  width: 20%;
+  margin: 10px 0;
+  border: 1px solid #ccd5ae;
+  padding: 15px;
+  font-size: 20px;
+  border-bottom: 3px solid #ccd5ae;
+}
+.exchange #commentaire {
+  width: 40%;
+}
+.exchange td {
+  text-align: center;
+  padding: 15px 5px;
+  border: 1px solid #ccd5ae;
+}
+.exchange #trLecteur {
+  border-bottom: 3px solid #ccd5ae;
+}
+.exchange .ajout {
+  width: 90%;
+  height: 50px;
+  border: 1px solid #ccd5ae;
+  border-radius: 5px;
+  margin: 0px auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9edc9;
+  color: #333;
+  cursor: pointer;
+}
+.exchange .ajout_fichier {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+.exchange .ajout_fichier div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.exchange .ajout_fichier label {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin: 10px 0;
+}
+.exchange .ajout_fichier input {
+  height: 30px;
+  border-radius: 5px;
+}
+.exchange .ajout_fichier .btn_ajout_fichier {
+  width: 100%;
+  font-size: 20px;
+  margin-top: 50px;
+}
+.exchange .div_cache {
+  display: none;
 }
 
 body {

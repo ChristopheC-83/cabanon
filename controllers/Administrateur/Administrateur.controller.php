@@ -55,4 +55,72 @@ class AdministrateurController extends MainController
         }
         header("Location:" . URL . "administration/droits");
     }
+
+    public function exchange()
+    {
+
+        $musiques = $this->administrateurManager->getMusiques();
+        $utilisateurs = $this->administrateurManager->getUtilisateurs();
+
+        $data_page = [
+            "page_title" => "Page des échanges de fichiers",
+            "page_description" => "Page des échanges de fichiers",
+            "view" => "views/Administrateur/exchange.view.php",
+            "template" => "views/commons/template.php",
+            "musiques" => $musiques,
+            "utilisateurs" => $utilisateurs,
+            "css" => "exchange",
+            "js" => ['app.js', 'admin.js', 'exchange.js'],
+        ];
+
+        $this->genererPage($data_page);
+    }
+
+    public function validation_ajoutfichier()
+    {
+        $file = $_POST; // infos du formulaire
+        $file2 = $_FILES['fichier']; // infos du fichier
+        // $repertoire = "public/assets/musiques/" . $_POST['nom_projet'];
+
+        // A garder pour test !
+        // echo "<pre>";
+        // print_r($file);
+        // print_r($file2);
+        // print_r("public/assets/musiques/".$_POST['nom_projet']);
+        // echo "</pre>";
+
+        try {
+
+            if (
+                // enregistrement fichier
+                $this->administrateurManager->ajoutMusique($_FILES['fichier'],  "public/assets/musiques/" . $_POST['nom_projet'])
+
+                &&
+                // Envoi données phpMyAdmin
+                $this->administrateurManager->bdAjoutFichier($_FILES['fichier']['name'], $_POST['nom_projet'], $_POST['instru'], $_POST['date_depot'], $_POST['commentaire'])
+            ) {
+                Toolbox::ajouterMessageAlerte("Le fichier est enregistré !  😍 ", Toolbox::COULEUR_VERTE);
+            } else {
+                Toolbox::ajouterMessageAlerte("L'enregistrement n'a pas été effectué 💀", Toolbox::COULEUR_ROUGE);
+            }
+        } catch (Exception $e) {
+            Toolbox::ajouterMessageAlerte($e->getMessage(), Toolbox::COULEUR_ROUGE);
+        }
+        header('Location:' . URL . 'administration/exchange');
+    }
+
+    public function supprimerFichier($id)
+    {
+        $fichier = $this->administrateurManager->getFichierById($id);
+        unlink("public/assets/musiques/".$fichier['nom_projet']."_".$fichier['nom_fichier']);
+
+        if($this->administrateurManager->suppressionFichierBd($id)){
+            Toolbox::ajouterMessageAlerte("Suppression base de données OK.", Toolbox::COULEUR_VERTE);
+        } else {
+            Toolbox::ajouterMessageAlerte("Echec de la supression. Contacter votre administrateur", Toolbox::COULEUR_ROUGE);
+            
+        }
+        header("Location:" . URL . "administration/exchange");
+        
+    }
 }

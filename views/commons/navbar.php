@@ -12,7 +12,7 @@
 
         <a href="<?= URL ?>administration/droits" class="navbar4">Gérer les droits</a>
         <i class="fa-solid fa-music"></i>
-        <a href="<?= URL ?>administration/page2" class="navbar5">Admin 2</a>
+        <a href="<?= URL ?>administration/exchange" class="navbar5">Exchange</a>
         <i class="fa-solid fa-music"></i>
 
     <?php endif ?>

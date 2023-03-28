@@ -128,7 +128,7 @@ try {
                         }
                         // $utilisateurController->validation_suppressionCompte();
                         break;
-                       
+
                     default:
                         throw new Exception("La page n'existe pas !");
                 }
@@ -154,6 +154,15 @@ try {
                         break;
                     case "validation_modificationRole":
                         $administrateurController->validation_modificationRole($_POST['login'], $_POST['role']);
+                        break;
+                    case "exchange":
+                        $administrateurController->exchange();
+                        break;
+                    case "validation_ajoutFichier":
+                        $administrateurController->validation_ajoutFichier();
+                        break;
+                    case "supprimerFichier":
+                        $administrateurController->supprimerFichier($url[2]);
                         break;
                     default:
                         throw new Exception("La page n'existe pas !");
