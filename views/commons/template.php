@@ -46,7 +46,7 @@
     <script src="<?= URL ?>public/javaScript/navbar.js"></script>
     <?php if (!empty($js)) : ?>
         <?php foreach ($js as $fichier_javascript) : ?>
-            <script src="<?= URL ?>public/javaScript/<?= $fichier_javascript ?>"></script>
+            <script src="<?= URL ?>public/javascript/<?= $fichier_javascript ?>"></script>
         <?php endforeach; ?>
     <?php endif; ?>
 

@@ -718,12 +718,32 @@ a {
 .exchange .div_cache {
   display: none;
 }
+.exchange .optionsFichiers {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  padding-top: 30px;
+}
+.exchange .optionsFichiers button {
+  padding: 5px 2px;
+  border: 3px solid #ccd5ae;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #e9edc9;
+  background-color: #e9edc9;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 @media (max-width: 1023px) {
   .exchange table {
     width: 95%;
   }
-  .exchange th, .exchange td {
+  .exchange th,
+  .exchange td {
     padding-left: 5px;
     padding-right: 5px;
     table-layout: fixed;

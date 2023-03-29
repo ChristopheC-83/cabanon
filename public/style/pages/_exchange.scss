@@ -20,12 +20,11 @@
     margin-bottom: 30px;
   }
 
-  h3{
-    color:#333;
+  h3 {
+    color: #333;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-
   }
 
   p {
@@ -93,37 +92,54 @@
       text-underline-offset: 6px;
       margin: 10px 0;
     }
-    input{
-        height: 30px;
-        border-radius: 5px;
+    input {
+      height: 30px;
+      border-radius: 5px;
     }
 
-    .btn_ajout_fichier{
-        width: 100%;
-        font-size: 20px;
-        margin-top: 50px;
-
+    .btn_ajout_fichier {
+      width: 100%;
+      font-size: 20px;
+      margin-top: 50px;
     }
   }
 
-  .div_cache{
+  .div_cache {
     display: none;
-}
+  }
+
+  .optionsFichiers {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border : none;
+    padding-top: 30px;
+
+    button {
+      padding: 5px 2px;
+      border: 3px solid $color5;
+      border-radius: 5px;
+      box-shadow: 2px 2px 4px $color4;
+      background-color: $color4;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
 }
 
-
-  
-@media (max-width : 1023px){
-  .exchange{
-  
-    table{
+@media (max-width: 1023px) {
+  .exchange {
+    table {
       width: 95%;
     }
-    th, td{
+    th,
+    td {
       padding-left: 5px;
       padding-right: 5px;
-      table-layout: fixed; 
+      table-layout: fixed;
     }
   }
-
 }

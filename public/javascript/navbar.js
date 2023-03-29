@@ -4,7 +4,7 @@ const overlay = document.querySelector(".overlay");
 const lien = document.querySelectorAll(".navbar a");
 
 if (window.matchMedia("(max-width: 767px)").matches) {
-  let visible = false;
+  let visible = false
 
   if (!visible) {
     cleSol.addEventListener("click", () => {

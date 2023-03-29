@@ -164,6 +164,11 @@ try {
                     case "supprimerFichier":
                         $administrateurController->supprimerFichier($url[2]);
                         break;
+                    case "modifierFichier":
+                        echo("id est : " .$url[2]);
+                        // $administrateurController->modifierFichier($url[2]);
+                        print_r($_POST);
+                        break;
                     default:
                         throw new Exception("La page n'existe pas !");
                 }

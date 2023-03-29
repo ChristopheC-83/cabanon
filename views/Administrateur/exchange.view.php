@@ -52,9 +52,12 @@
                             <td rowspan="2"><?= $musique['commentaire'] ?></td>
                         </tr>
                         <tr id="trLecteur">
-                            <td>
+                            <td class="optionsFichiers">
                                 <form action="supprimerFichier/<?= $musique['id'] ?>" method="post" onSubmit="return confirm('Voulez-vous vraiment supprimer Le fichier : <?= $musique['nom_fichier'] ?> ?')">
                                     <button type="submit" class="btn btn-sup">Supprimer</button>
+                                </form>
+                                <form action="modifierFichier/<?= $musique['id'] ?>" method="post">
+                                    <button type="submit" class="btn btn-sup">Modifier</button>
                                 </form>
                             </td>
                             <td colspan="2"><audio controls>
@@ -76,11 +79,13 @@
                         <td rowspan="2"><?= $musique['commentaire'] ?></td>
                     </tr>
                     <tr id="trLecteur">
-                        <td>
+                        <td class="optionsFichiers">
                             <form action="supprimerFichier/<?= $musique['id'] ?>" method="post" onSubmit="return confirm('Voulez-vous vraiment supprimer Le fichier : <?= $musique['nom_fichier'] ?> ?')">
                                 <button type="submit" class="btn btn-sup">Supprimer</button>
                             </form>
-
+                            <form action="modifierFichier/<?= $musique['id'] ?>" method="post">
+                                <button type="submit" class="btn btn-sup">Modifier</button>
+                            </form>
                         </td>
                         <td colspan="2"><audio controls>
                                 <source src="<?= URL ?>/public/assets/musiques/<?= $musique['nom_projet'] ?>_<?= $musique['nom_fichier'] ?>">
