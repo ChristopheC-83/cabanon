@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" id="navbarMQ">
 
     <a href="<?= URL ?>accueil" class="navbar1">LaboraZic</a>
     <i class="fa-solid fa-music"></i>

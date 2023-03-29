@@ -38,3 +38,20 @@
       }
   }
 }
+
+@media (max-width: 767px) {
+  .membres {
+    .content {
+      flex-direction: column;
+      // width: 90%;
+
+      img {
+        margin-bottom: 25px;
+      }
+      .contentText {
+        width: 90%;
+        text-align: justify;
+      }
+    }
+  }
+}

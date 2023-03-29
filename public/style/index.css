@@ -149,6 +149,7 @@ a {
   }
   .header .cleSol {
     display: block;
+    z-index: 6;
   }
   .navbar {
     flex-direction: column;
@@ -198,8 +199,9 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     display: none;
+    z-index: 4;
   }
 }
 .footer {
@@ -275,6 +277,18 @@ a {
   width: 40%;
 }
 
+@media (max-width: 767px) {
+  .accueil .content {
+    flex-direction: column;
+  }
+  .accueil .content img {
+    margin-bottom: 25px;
+  }
+  .accueil .content .contentText {
+    width: 90%;
+    text-align: justify;
+  }
+}
 .droits table {
   width: 80%;
   text-align: center;
@@ -495,6 +509,18 @@ a {
   width: 40%;
 }
 
+@media (max-width: 767px) {
+  .membres .content {
+    flex-direction: column;
+  }
+  .membres .content img {
+    margin-bottom: 25px;
+  }
+  .membres .content .contentText {
+    width: 90%;
+    text-align: justify;
+  }
+}
 .galerie h1,
 .galerie h2 {
   text-align: center;
@@ -532,6 +558,18 @@ a {
   width: 40%;
 }
 
+@media (max-width: 767px) {
+  .galerie .content {
+    flex-direction: column;
+  }
+  .galerie .content img {
+    margin-bottom: 25px;
+  }
+  .galerie .content .contentText {
+    width: 90%;
+    text-align: justify;
+  }
+}
 .erreur p {
   text-align: center;
   margin-top: 80px;
@@ -681,6 +719,16 @@ a {
   display: none;
 }
 
+@media (max-width: 1023px) {
+  .exchange table {
+    width: 95%;
+  }
+  .exchange th, .exchange td {
+    padding-left: 5px;
+    padding-right: 5px;
+    table-layout: fixed;
+  }
+}
 .droits h1,
 .droits h2 {
   text-align: center;
