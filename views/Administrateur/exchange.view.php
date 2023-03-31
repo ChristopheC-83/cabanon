@@ -4,13 +4,13 @@
     <h1>L'Exchange</h1>
 
     <h2>Page des échanges des fichiers musicaux</h2>
-    <h2>Projets disponibles :
+    <h2>Dossiers disponibles :
         <form method="POST">
             <select name="projet" onchange=submit()>
 
                 <?php $projets = array_unique(array_column($musiques, 'nom_projet')); ?>
                 <option value=""></option>
-                <option value="">Tous les projets</option>
+                <option value="">Tous les dossiers</option>
                 <?php foreach ($projets as $projet) : ?>
                     <option value="<?= $projet ?>"><?= $projet ?></option>
                 <?php endforeach ?>
@@ -24,7 +24,7 @@
     <table>
         <tr>
             <th id="nom">Nom</th>
-            <th id="nom_projet">Projet</th>
+            <th id="nom_projet">Dossier</th>
             <th id="instru">Instrument(s)</th>
             <th id="date">Date de dépôt</th>
             <th id="commentaire">Commentaire</th>
@@ -117,7 +117,7 @@
                  $_POST['nom_fichier'] 
             </div> -->
             <div>
-                <label for="nom_projet">Nom du Projet (pas du fichier !) :</label>
+                <label for="nom_projet">Nom du dossier :</label>
                 <input type="text" name="nom_projet" id="nom_projet">
                 <!-- $_POST['nom_projet']-->
             </div>
@@ -136,7 +136,7 @@
 
 
 
-            <button type="submit" class="btn_ajout_fichier ajout "> Ajouter Fichier</button>
+            <button type="submit" class="btn_ajout_fichier ajout ">Ajouter Fichier</button>
         </form>
 
     </div>
