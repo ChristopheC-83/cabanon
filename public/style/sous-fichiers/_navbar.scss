@@ -116,22 +116,22 @@
       transform: translateY(0);
     }
     .navbar3 {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
     .navbar4 {
-      transform: translateY(-0);
+      transform: translateY(0);
     }
     .navbar5 {
       transform: translateY(0);
     }
     .navbar6 {
-      transform: translateY(-0);
+      transform: translateY(0);
     }
     .navbar7 {
       transform: translateY(0);
     }
     .navbar8 {
-      transform: translateY(-0);
+      transform: translateY(0);
     }
     .navbar9 {
       transform: translateY(0);
@@ -139,8 +139,8 @@
     .navbar10 {
       transform: translateY(0);
     }
-    transform: translateX(-50%);
-    transition: all 0.5s;
+    transform: translateX(-150%);
+    transition: all 0.75s;
   }
   .overlay{
     position: absolute;

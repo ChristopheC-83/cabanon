@@ -112,4 +112,19 @@ class AdministrateurManager extends MainManager
         $stmt->closeCursor();
         return $estModifie;
     }
+
+    public function bdModifierFichier($id, $new_projet, $new_instru, $new_commentaires)
+    {
+        $req = "UPDATE ZikExchange set  nom_projet = :nom_projet, commentaire=:commentaire, instru=:instru WHERE id= :id" ;
+        $stmt = $this->getBDD()->prepare($req);
+        $stmt->bindValue(":nom_projet", $new_projet, PDO::PARAM_STR);
+        $stmt->bindValue(":instru", $new_instru, PDO::PARAM_STR);
+        $stmt->bindValue(":commentaire", $new_commentaires, PDO::PARAM_STR);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $estModifie = ($stmt->rowCount() > 0);
+        $stmt->closeCursor();
+        return $estModifie;
+    }
+
 }

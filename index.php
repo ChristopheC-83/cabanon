@@ -126,7 +126,7 @@ try {
                             Toolbox::ajouterMessageAlerte("Vous n'avez pas modifié l'image.", Toolbox::COULEUR_ROUGE);
                             header('Location:' . URL . 'compte/profil');
                         }
-                        // $utilisateurController->validation_suppressionCompte();
+                        $utilisateurController->validation_suppressionCompte();
                         break;
 
                     default:
@@ -165,9 +165,20 @@ try {
                         $administrateurController->supprimerFichier($url[2]);
                         break;
                     case "modifierFichier":
-                        echo("id est : " .$url[2]);
-                        // $administrateurController->modifierFichier($url[2]);
-                        print_r($_POST);
+                        // echo("id est : " .$url[2]);
+                        $administrateurController->modifierFichier($url[2]);
+                        break;
+                    case "validation_modifierFichier":
+                        if (!empty($_POST['new_projet']) && !empty($_POST['new_instru']) && !empty($_POST['new_commentaires'])) {
+                            $new_projet = Securite::secureHTML($_POST['new_projet']);
+                            $new_instru = Securite::secureHTML($_POST['new_instru']);
+                            $new_commentaires = Securite::secureHTML($_POST['new_commentaires']);
+                            $id = Securite::secureHTML($_POST['id']);
+                            $administrateurController->validation_modifierFichier($id, $new_projet, $new_instru, $new_commentaires);
+                        } else {
+                            Toolbox::ajouterMessageAlerte("Vous n'avez pas renseigné toutes les informations requises !", Toolbox::COULEUR_ROUGE);
+                            header('Location:' . URL . 'administration/exchange');
+                        }
                         break;
                     default:
                         throw new Exception("La page n'existe pas !");

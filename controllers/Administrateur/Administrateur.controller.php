@@ -112,15 +112,55 @@ class AdministrateurController extends MainController
     public function supprimerFichier($id)
     {
         $fichier = $this->administrateurManager->getFichierById($id);
-        unlink("public/assets/musiques/".$fichier['nom_projet']."_".$fichier['nom_fichier']);
+        unlink("public/assets/musiques/" . $fichier['nom_projet'] . "_" . $fichier['nom_fichier']);
 
-        if($this->administrateurManager->suppressionFichierBd($id)){
+        if ($this->administrateurManager->suppressionFichierBd($id)) {
             Toolbox::ajouterMessageAlerte("Suppression base de données OK.", Toolbox::COULEUR_VERTE);
         } else {
             Toolbox::ajouterMessageAlerte("Echec de la supression. Contacter votre administrateur", Toolbox::COULEUR_ROUGE);
-            
         }
         header("Location:" . URL . "administration/exchange");
-        
+    }
+    public function modifierFichier($id)
+    {
+        $fichier = $this->administrateurManager->getFichierById($id);
+
+        $data_page = [
+            "page_title" => "Page de modification de " . $fichier['nom_fichier'] . " / " . $fichier['nom_projet'],
+            "page_description" => "Page de modification de " . $fichier['nom_fichier'] . " / " . $fichier['nom_projet'],
+            "view" => "views/Administrateur/modifFichier.view.php",
+            "template" => "views/commons/template.php",
+            "css" => "modifFichier",
+            "js" => ['app.js', 'modifFichier.js'],
+            "fichier" => $fichier,
+        ];
+
+        $this->genererPage($data_page);
+    }
+    public function validation_modifierFichier($id, $new_projet, $new_instru, $new_commentaires)
+    {
+        // echo("validation modif "."  ".$id ." , ".$new_projet." , ". $new_instru." , ". $new_commentaires);
+        $fichier = $this->administrateurManager->getFichierById($id);
+
+        $ancien_nom = $fichier['nom_projet'] . "_" . $fichier['nom_fichier'];
+        $nouveau_nom = $new_projet . "_" . $fichier['nom_fichier'];
+        $ancien_nom_path =  "public/assets/musiques/" . $ancien_nom;
+        $nouveau_nom_path = "public/assets/musiques/" . $nouveau_nom;
+
+        print_r($fichier);
+
+        if (
+            $this->administrateurManager->bdModifierFichier($id, $new_projet, $new_instru, $new_commentaires)
+            &&
+            (rename($ancien_nom_path, $nouveau_nom_path))
+
+        ) {
+            Toolbox::ajouterMessageAlerte("Mise à jour du fichier effectuée.", Toolbox::COULEUR_VERTE);
+        } else {
+            Toolbox::ajouterMessageAlerte("Echec de la mise à jour ".$ancien_nom_path.$nouveau_nom_path, Toolbox::COULEUR_ROUGE);
+        }
+
+        header('Location:' . URL . 'administration/exchange');
+
     }
 }

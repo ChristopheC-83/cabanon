@@ -7,7 +7,14 @@
         <div class="contentText">
             <p>D'un groupe de musique Londais au mixage et au mastering...</p><br>
             <p>En tant que musicien et adepte du mastering/mixage, je suis passionné par l'art de la création sonore. Mon attrait pour la musique et l'étude des sons se reflète dans ma recherche constante de la perfection sonore et dans ma volonté de donner vie à une piste musicale en peaufinant chaque détail technique. Mon engagement envers la musique et le mastering/mixage est tel que je suis convaincu que chaque morceau a le potentiel d'atteindre une excellence sonore pour les auditeurs. </p>
+            <br>
+            <p>Texte généré par chatGPT 😅</p>
+            <br><br>
+            <h2>Note de MAJ : <br>Modif de fichiers disponible</h2>
+            <h2>Dossier / instru / commentaires</h2>
         </div>
+
+
 
     </div>
 
